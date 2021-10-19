@@ -1,0 +1,30 @@
+  <h1>Создать новое обьявление о работе</h1>
+  <%= form_with model: @job, url: new_job_path do |f| %>
+    <p>
+    <%= f.label 'title' %><br>
+    <%= f.text_field :title %>
+    </p>
+    <p>
+    <%= f.label 'description' %><br>
+    <%= f.text_field :description %>
+    </p>
+    <p>
+    <%= f.label 'rate_hour' %><br>
+    <%= f.number_field :rate_hour %>
+    </p>
+    <p>
+      <%= f.label 'workmans_count' %><br>
+      <%= f.number_field :workmans_count %>
+    </p>
+    <p>
+      <%= f.label 'contact' %> <br>
+      <%= f.text_field :contact %>
+    </p>
+    <p>
+      <%= f.label 'duration' %> <br>
+      <%= f.number_field :duration %>
+    </p>
+    <p>
+    <%= f.submit 'Создать' %>
+    </p>
+  <% end %>

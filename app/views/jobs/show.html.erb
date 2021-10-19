@@ -1,0 +1,12 @@
+<%= render 'layouts/registration' %>
+<h1><%= @job.title %></h1>
+
+<p> <%= @job.description %> </p>
+
+<ul>
+	<li><%= link_to "Edit", edit_job_path(@job)%></li>
+	<li><%= link_to "Destroy", job_path(@job),
+								method: :delete,
+								data: {confirm: "Уверены?"} %></li>
+	<li><%= link_to "All", jobs_path%></li>								
+</ul>	

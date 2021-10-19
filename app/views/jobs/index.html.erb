@@ -1,0 +1,8 @@
+<%= render 'layouts/registration' %>
+<h1>Обьявления о работе</h1>
+<p><ul>	
+<% @jobs.each do |job| %>
+	<li><%= link_to job.title, job_path(job.id) %> </li>
+<% end %>
+<%= link_to 'создать новое обьявление', new_job_path%>	
+</ul></p>

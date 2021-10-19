@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  rate_hour: 1
+  workmans_count: 1
+  contact: MyString
+
+two:
+  title: MyString
+  description: MyText
+  rate_hour: 1
+  workmans_count: 1
+  contact: MyString
