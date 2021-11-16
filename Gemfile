@@ -11,6 +11,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'puma', '~> 5.0'
 gem 'pg'
 gem 'activeadmin'
+gem 'cancan'
 gem 'devise', '~> 4.7'
 gem 'bcrypt', '~> 3.1.7'
 # Use SCSS for stylesheets

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_19_160508) do
+ActiveRecord::Schema.define(version: 2021_11_16_163509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,11 +47,16 @@ ActiveRecord::Schema.define(version: 2021_10_19_160508) do
     t.string "first_name"
     t.string "last_name"
     t.string "patronymic"
-    t.string "contact"
     t.integer "balance"
     t.boolean "is_posting_allow"
-    t.string "email"
     t.string "password_digest"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "contact"
+    t.index ["reset_password_token"], name: "index_employers_on_reset_password_token", unique: true
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -69,6 +74,9 @@ ActiveRecord::Schema.define(version: 2021_10_19_160508) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "role", default: 1
+    t.string "name"
+    t.string "contact"
   end
 
 end
