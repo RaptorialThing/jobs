@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'employers/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root "employers#index"
+  root "jobs#index"
   get 'employers/new', to: 'employers#new'
   post 'employers/new', to: 'employers#create'
   post 'jobs/new', to: 'jobs#create'

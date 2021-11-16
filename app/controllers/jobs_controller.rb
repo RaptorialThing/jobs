@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+before_action :require_user_logged_in!, only: [:edit,:update,:new,:create,:destroy]
 def index
     @jobs = Job.all
   end
@@ -21,7 +22,7 @@ def index
     end     
   end
 
-  def new
+  def new  
     @job = Job.new
   end
 
